@@ -2,56 +2,56 @@ import csv
 import re
 
 # Fibonacci Series
-# number = int(input('Enter a number: '))
-# arr = []
-# a, b = 0, 1
-# while len(arr) < number:
-#     arr.append(a)
-#     a, b = b, a + b
-# print(arr)
+number = int(input('Enter a number: '))
+arr = []
+a, b = 0, 1
+while len(arr) < number:
+    arr.append(a)
+    a, b = b, a + b
+print(arr)
 
 # Word frequency
-# file_name = input('Enter file name: ')
-# with open(file_name, 'r', encoding='utf-8') as file:
-#     data = file.read()
-#     words = data.split()
-#     word_count = {}
-#     for word in words:
-#         if word in word_count:
-#             word_count[word] += 1
-#         else:
-#             word_count[word] = 1
-#     print(word_count)
+file_name = input('Enter file name: ')
+with open(file_name, 'r', encoding='utf-8') as file:
+    data = file.read()
+    words = data.split()
+    word_count = {}
+    for word in words:
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    print(word_count)
 
 # Data Validation
-# try:
-#     value = input('Enter Value: ')
-#     data_type = input('Enter Data Type: ').lower()
-#     if data_type == 'integer':
-#         try:
-#             int(value)
-#             print('Valid')
-#         except ValueError:
-#             print('Invalid')
+try:
+    value = input('Enter Value: ')
+    data_type = input('Enter Data Type: ').lower()
+    if data_type == 'integer':
+        try:
+            int(value)
+            print('Valid')
+        except ValueError:
+            print('Invalid')
 
-#     elif data_type == 'float':
-#         try:
-#             float(value)
-#             print('Valid')
-#         except ValueError:
-#             print('Invalid')
+    elif data_type == 'float':
+        try:
+            float(value)
+            print('Valid')
+        except ValueError:
+            print('Invalid')
 
-#     elif data_type == 'string':
-#         print(isinstance(value, str))
+    elif data_type == 'string':
+        print(isinstance(value, str))
 
-#     elif data_type == 'email':
-#         # Simple regex for email validation
-#         pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
-#         print(re.match(pattern, value) is not None)
-#     else:
-#         raise ValueError(f'Unsupported data_type: {data_type}')
-# except Exception as e:
-#     print(e) 
+    elif data_type == 'email':
+        # Simple regex for email validation
+        pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+        print(re.match(pattern, value) is not None)
+    else:
+        raise ValueError(f'Unsupported data_type: {data_type}')
+except Exception as e:
+    print(e) 
 
 # File handling
 try:
